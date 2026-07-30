@@ -1,21 +1,35 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
-    <header style={styles.header}>
-      <h2>🎬 PhimHay Online</h2>
-      <nav>
-        <Link to="/" style={styles.link}>Trang chủ</Link> | {' '}
-        <Link to="/about" style={styles.link}>Giới thiệu</Link>
-      </nav>
+    <header className="header">
+      <div className="container header-container">
+        <NavLink to="/" className="logo">
+          Movie<span>App</span>
+        </NavLink>
+
+        <nav className="navigation">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
+            Trang chủ
+          </NavLink>
+
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
+            Giới thiệu
+          </NavLink>
+        </nav>
+      </div>
     </header>
   );
 }
-
-const styles = {
-  header: { background: '#282c34', padding: '15px 30px', color: 'white', display: 'flex', justifyContent: 'space-between', alignItems: 'center' },
-  link: { color: '#61dafb', textDecoration: 'none', margin: '0 10px', fontWeight: 'bold' }
-};
 
 export default Header;
