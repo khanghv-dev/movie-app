@@ -1,0 +1,87 @@
+/* Khung bao bọc toàn bộ trang */
+.detail-container {
+  padding: 40px 20px;
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Thẻ chứa nội dung chi tiết */
+.detail-card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  border: 1px solid #333;
+}
+
+/* Tiêu đề phim */
+.detail-title {
+  color: #f5c518;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 15px;
+  margin-top: 0;
+}
+
+/* Khu vực chia 2 cột: Ảnh và Thông tin */
+.detail-content {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+/* Khung giả lập hình ảnh */
+.detail-image-placeholder {
+  flex: 1;
+  min-width: 250px;
+  background-color: #2a2a2a;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  color: #777;
+  border: 1px dashed #555;
+}
+
+/* Phần chữ chi tiết */
+.detail-info {
+  flex: 2;
+  min-width: 300px;
+  line-height: 1.8;
+}
+
+.detail-info p {
+  margin-bottom: 12px;
+  color: #cccccc;
+}
+
+.detail-info strong {
+  color: #ffffff;
+}
+
+/* Nút quay lại */
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f5c518;
+  color: #000000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #e0b316;
+}
